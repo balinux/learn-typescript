@@ -29,3 +29,21 @@ function multiplyNumber(num1: number, num2: number): number {
 const result = multiplyNumber(2, 5)
 
 console.log('result', result)
+
+
+/**
+ * function sebagai type data
+ * Tammbah : merupakan nama Typedata 
+ * (va1: number, val2: number) ; merupakan parameter dan type parameter
+ * number: merupakan kembalian/return data
+ * 
+ */
+type Tambah = (va1: number, val2: number) => number;
+
+// ini cara implemetasi type funtion pada function add
+const add: Tambah = (va1: number, val2: number): number => {
+    return va1 + val2
+}
+
+// cara  implementasi
+console.log('add', add(12, 23))

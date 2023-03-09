@@ -19,3 +19,9 @@ function multiplyNumber(num1, num2) {
 }
 const result = multiplyNumber(2, 5);
 console.log('result', result);
+// ini cara implemetasi type funtion pada function add
+const add = (va1, val2) => {
+    return va1 + val2;
+};
+// cara  implementasi
+console.log('add', add(12, 23));
