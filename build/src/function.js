@@ -13,3 +13,9 @@ function printName() {
     console.log('void function');
 }
 printName();
+// argunment
+function multiplyNumber(num1, num2) {
+    return num1 * num2;
+}
+const result = multiplyNumber(2, 5);
+console.log('result', result);
