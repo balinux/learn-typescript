@@ -14,7 +14,7 @@ let randomData = "random";
 randomData = 23;
 console.log("randomData", randomData);
 /**
- * type union untuk handle seperti nomor hp dengan kode negara
+ * type union untuk handle type data lebih dari satu
  */
 let phone;
 phone = 62816123;
