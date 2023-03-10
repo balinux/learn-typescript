@@ -36,3 +36,14 @@ let fullName = fullname("rio");
 let fullName2 = fullname("khalid", "putra");
 console.log(fullName);
 console.log(fullName2);
+/**
+ * Optional Parameter
+ * optional parameter di identifikasi dengan menggunakan tanda tanya(?)
+ * jika parameter optional tidak diisi, maka akan memberikan data undefined
+ * bisa di handle dengan Nullish coalescing operator (??)
+ */
+const getUmur = (tahunLahir, tahunSekarang) => {
+    return (tahunSekarang !== null && tahunSekarang !== void 0 ? tahunSekarang : 0) - tahunLahir;
+};
+let umur = getUmur(1992, 2023);
+console.log(umur);
