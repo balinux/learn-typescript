@@ -93,3 +93,29 @@ class GetterSetter extends User {
 let exampleGetSet = new GetterSetter("rio",22)
 exampleGetSet.setName("rio@ganteng.com")
 console.log(exampleGetSet.getName());
+
+
+/**
+ * sebuah properti atau method yang bisa di akses dari calss itu sendiri tanpa menginstance classnya
+ *
+ */
+class StaticPropertyMethod extends User {
+    private _email: string = "";
+
+    // karna static jadi tidak perlu di masukkan ke constructor
+    static getRoleName: string = "Admin"
+
+    constructor(name: string, age: number) {
+      super(name, age);
+    }
+
+    static getName(){
+        return "Balinux"
+    }
+   }
+  
+  let staticPropertyMethod = StaticPropertyMethod.getRoleName
+
+  console.log(staticPropertyMethod);
+  console.log(StaticPropertyMethod.getName());
+  
