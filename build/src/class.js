@@ -22,21 +22,25 @@ exports.User = User;
  * class ang mempunyai sifat turunan dari parent class
  */
 class Admin extends User {
-    constructor() {
-        super(...arguments);
+    /**
+     * untuk menambah contructor pada class child maka dibutuhkan sebuah super constructor untuk mendefinisikan properti pada class parent
+     */
+    constructor(phone, name, age) {
+        super(name, age);
         this.read = true;
         this.write = true;
+        this.phone = phone;
     }
     /**
-     * getRole merupakan nama function
-     * { read: boolean; write: boolean } : merupakan type return
-     * @returns
-     * return {
-          read: this.read,
-          write: this.write,
-        };
-        bagian ini meruapak returnnya
-     */
+   * getRole merupakan nama function
+   * { read: boolean; write: boolean } : merupakan type return
+   * @returns
+   * return {
+        read: this.read,
+        write: this.write,
+      };
+      bagian ini meruapak returnnya
+   */
     getRole() {
         return {
             read: this.read,
@@ -45,8 +49,9 @@ class Admin extends User {
     }
 }
 // class admin butuh 2 variable karna mengikuti construct dari parent
-let admin = new Admin("rio", 22);
-console.log(admin.getName());
+let admin = new Admin("082082082", "rio", 22);
+console.log(admin);
+console.log(admin.getRole());
 console.log(admin.getRole());
 admin.setName("rian");
 console.log(admin.getName());

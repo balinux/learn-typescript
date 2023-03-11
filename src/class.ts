@@ -28,8 +28,17 @@ export class User {
 class Admin extends User {
   read: boolean = true;
   write: boolean = true;
+  phone: string;
 
-/**
+  /**
+   * untuk menambah contructor pada class child maka dibutuhkan sebuah super constructor untuk mendefinisikan properti pada class parent
+   */
+  constructor(phone: string, name: string, age: number) {
+    super(name, age);
+    this.phone = phone;
+  }
+
+  /**
  * getRole merupakan nama function
  * { read: boolean; write: boolean } : merupakan type return
  * @returns 
@@ -48,8 +57,9 @@ class Admin extends User {
 }
 
 // class admin butuh 2 variable karna mengikuti construct dari parent
-let admin = new Admin("rio",22)
-console.log(admin.getName());
+let admin = new Admin("082082082", "rio", 22);
+console.log(admin);
+console.log(admin.getRole());
 console.log(admin.getRole());
 admin.setName("rian");
 console.log(admin.getName());
