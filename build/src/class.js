@@ -55,3 +55,29 @@ console.log(admin.getRole());
 console.log(admin.getRole());
 admin.setName("rian");
 console.log(admin.getName());
+/**
+ * Getter and Setter
+ * Setter: validasi untuk mengubah property pada class
+ * getter: mengambil property pada class
+ *
+ * ENKAPSULASI
+ * public: bisa di akses di semua class/ dari luar kelas
+ * protected: hanya bisa di akses dari class tersebut, dan class turunannya
+ * private: hanya bisa diakses dari class itu sendiri
+ */
+class GetterSetter extends User {
+    constructor(name, age) {
+        super(name, age);
+        this._email = "";
+    }
+    //   untuk mengubah dan mengambil data email private maka dibutuhkan getter dan setter
+    set email(value) {
+        this._email = value;
+    }
+    get email() {
+        return this._email;
+    }
+}
+let exampleGetSet = new GetterSetter("rio", 22);
+exampleGetSet.setName("rio@ganteng.com");
+console.log(exampleGetSet.getName());
